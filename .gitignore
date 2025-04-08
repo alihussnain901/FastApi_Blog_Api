@@ -1,0 +1,45 @@
+
+---
+
+# .gitignore
+
+```gitignore
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# dotenv
+.env
+
+# IDE folders
+.vscode/
+.idea/
+
+# Mac and Linux OS files
+.DS_Store
+*.swp
+
+# Database & logs
+*.sqlite3
+*.log
+
+# Compiled C files
+*.so
+
+# Coverage & pytest
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Migrations
+alembic/versions/
+
+# VSCode settings
+.vscode/
