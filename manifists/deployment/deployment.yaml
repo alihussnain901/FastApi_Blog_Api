@@ -51,12 +51,12 @@ spec:
           successThreshold: 1
           failureThreshold: 3
           periodSeconds: 10
-        env:
-        - name: DB_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: blog-api
-              key: DB_HOST
+        envFrom:
+        - configMapRef:
+            name:  blog-api-config
+        - secretRef:
+            name:  blog-api-secret
+
         ports:
         - containerPort:  80
           name:  blog-api
