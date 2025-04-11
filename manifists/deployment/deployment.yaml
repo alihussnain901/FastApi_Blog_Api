@@ -26,7 +26,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  blog-api
-        image:  alihussnain901/fast-blog-api:latest
+        image:  alihussnain901/fastapi-blog-api:latest
         resources:
           requests:
             cpu: 100m
