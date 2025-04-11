@@ -21,6 +21,11 @@ spec:
         ports:
         - containerPort: 5432
           name: db
+        envFrom:
+        - configMapRef:
+            name: db-config
+        - secretRef:
+            name: db-secret
         # volumeMounts:
         # - name: blog-api-volume
         #   mountPath: /var/lib/postgresql/data
