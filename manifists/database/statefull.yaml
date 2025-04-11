@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: blog-api-db
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: blog-api-db
+  serviceName: "blog-api-db"
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: blog-api-db
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: blog-api-db
+        image: postgres
+        ports:
+        - containerPort: 5432
+          name: db
+        # volumeMounts:
+        # - name: blog-api-volume
+        #   mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: blog-api-volume
+        persistentVolumeClaim:
+          claimName: blog-api-pvc

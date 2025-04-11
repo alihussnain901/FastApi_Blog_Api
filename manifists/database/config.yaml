@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: CM
+  namespace: default
+data:
+  DATABASE_NAME: postgres
+  DATABASE_USER: postgres
