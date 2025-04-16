@@ -19,6 +19,17 @@ def read_root():
 
 
 
+@app.get("/shawaiz")
+def shezy():
+    
+    return {"Name": "Shawaiz",
+            "Age": 23,
+            "City": "Gujranwala",
+            "Country": "Pakistan",
+            "Occupation": "DevOps Engineer",
+            "Hobby": "Coding"}
+
+
 
 
 
